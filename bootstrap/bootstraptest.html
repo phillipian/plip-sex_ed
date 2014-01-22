@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>State of The Academy 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+		body {
+		margin-left: 25%;
+		margin-right: 25%;
+		min-width: 626px;
+		}
+
+		#header {
+		margin-left:auto;
+		margin-right: auto;
+		font-size: 15px;
+		}
+
+		b2 {
+		font-size: 20px;
+		line-height: 125%;
+		}
+
+		h1 {
+		text-align: center;
+		}
+
+		#centerList {
+		width: 626px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 17px;
+		}
+	</style>
+
+  </head>
+  <body>
+    <div id="header">
+      <h1>State of The Academy 2013</h1>
+      <script src="http://code.jquery.com/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    </div>
+   
+    <div id="centerList">
+      <ul class="nav nav-pills">
+        <li class=""><a href="#">Overview</a></li>
+        <li class="active"><a href="#">Wellness</a></li>
+        <li class="disabled"><a href="#">Drugs and Alcohol</a></li>
+        <li class="disabled"><a href="#">Sex</a></li>
+        <li class="disabled"><a href="#">Academics</a></li>
+        <li class=""><a href="#">Discipline</a></li>
+      </ul>
+    </div>
+    
+	<div id="bar" style="height: 250px;"></div>
+	<b2>
+	  <p><span style = "font-size: 25px">S</span>tudents who said they are happy at Andover reported that they get an average of 6.70 hours of sleep per night, while those who said they are unhappy sleep only 6.08 hours each night on average.</p>
+	  <p>Of the students surveyed, 81.8 percent said that they are happy at Andover. Surveyed females and males appear to be equally happy at Andover, as 80.8 percent of surveyed females and 82.9 percent of surveyed males reported that they are happy at school. </p>
+	  <p>While 87.6 percent of Juniors and 88.2 percent of Lowers said they are happy, only 77.0 percent of Uppers and 76.1 percent of Seniors responded positively.<p>
+	  <p>On average, surveyed students sleep for 6.59 hours each night. At 6.20 hours of sleep per night, surveyed Uppers averaged the least amount of sleep. Juniors appear to get the most sleep with an average of 6.92 hours per night, according to the survey. </p>
+	  <p>An overwhelming majority, 72.0 percent of surveyed students, believed that their commitments at Andover, such as coursework, clubs and sports, affect their overall health.</p>
+	  <p>More surveyed female students have used Graham House than male students. 38.7 percent of surveyed females reported that they have gone to Graham House compared to the 26.7 percent of male students who responded similarly. <p/>
+	  <p>A slightly lower number of students felt that Graham House carries a social stigma than last year. Of the surveyed students, 72.6 percent felt that Graham House has a social stigma, while 76.0 percent of surveyed students last year responded similarly.</p>
+	</b2>
+		<!-- morris.js (for pretty graphs) -->
+	
+	<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.2.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	<script src="http://cdn.oesmith.co.uk/morris-0.4.2.min.js"></script>
+	<script>
+    new  Morris.Bar({
+  element: 'bar',
+  data: [
+    { y: '3- hours', a: 12},
+    { y: '4 hours', a: 23},
+    { y: '5 hours', a: 81},
+    { y: '6 hours', a: 176},
+    { y: '7 hours', a: 253},
+    { y: '8 hours', a: 116},
+    { y: '9 hours', a: 19},
+    {y: '10+ hours', a: 6}
+  ],
+  xkey: 'y',
+  ykeys: ['a'],
+  labels: ['Number of Students']
+
+});
+    </script>
+  </body>
+</html>
